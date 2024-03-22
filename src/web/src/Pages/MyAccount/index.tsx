@@ -1,8 +1,10 @@
+import Layout from '../../Components/Layout';
+
 const MyAccount: React.FC = () => {
     return (
-        <div>
+        <Layout>
                 <h1>My Account</h1>
-        </div>
+        </Layout>
     );
 };
 

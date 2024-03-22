@@ -10,7 +10,7 @@ import SignIn from './Pages/SignIn';
 import Navbar from './Components/Navbar';
 
 const AppRoutes = () => {
-  let routes = useRoutes([
+  const routes = useRoutes([
     {path: '/', element: <Home/>},
     {path: '/my-account', element: <MyAccount/>},
     {path: '/my-order', element: <MyOrder/>},
