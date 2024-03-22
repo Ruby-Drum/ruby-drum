@@ -1,12 +1,11 @@
 import './App.css';
 
 function App() {
-  return(
+  return (
     <>
-      <div className='bg-gray-500'>Hello, World!</div>
+      <h1>Hello, World!</h1>
     </>
   )
-  
 }
 
 export default App;
