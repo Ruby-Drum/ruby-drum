@@ -1,8 +1,17 @@
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.OpenApi.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Sqlite;
+using Ruby.Drum.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
+
+builder.Services.AddDbContext<StoreContext>(options =>
+{
+    options.UseSqlite("Data Source=../store.db",
+    m => m.MigrationsAssembly("Ruby.Drum.Api"));
+});
 
 builder.Services.AddSwaggerGen(c =>
 {

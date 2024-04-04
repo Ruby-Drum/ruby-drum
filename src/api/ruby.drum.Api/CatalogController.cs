@@ -1,5 +1,6 @@
 using System.ComponentModel.Design;
 using Microsoft.AspNetCore.Mvc;
+using Ruby.Drum.Data;
 using Ruby.Drum.Domain.Catalog;
 //C
 namespace Ruby.Drum.Api.Controllers
@@ -8,6 +9,14 @@ namespace Ruby.Drum.Api.Controllers
     [Route("api/[controller]")]
     public class CatalogController : ControllerBase
     {
+
+        private readonly StoreContext _context;
+
+        public CatalogController(StoreContext context)
+        {
+            _context = context;
+        }
+
         [HttpGet]
         public IActionResult GetItems()
         {
@@ -21,7 +30,7 @@ namespace Ruby.Drum.Api.Controllers
 
             };
 
-            return Ok(items);
+            return Ok(_context.Items);
         }
 
         [HttpGet("{id:int}")]
