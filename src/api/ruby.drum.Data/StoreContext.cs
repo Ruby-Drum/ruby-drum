@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using Ruby.Drum.Domain.Catalog;
+using ruby.drum.Domain.Catalog;
 
-namespace Ruby.Drum.Data;
+namespace ruby.drum.Data;
 
 public class StoreContext : DbContext
 {
@@ -11,4 +11,12 @@ public class StoreContext : DbContext
     }
 
     public DbSet<Item> Items { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        {
+            base.OnModelCreating(builder);
+            DbInitializer.Initialize(builder);
+        }
+    }
 }

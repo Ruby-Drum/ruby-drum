@@ -1,9 +1,9 @@
 using System.ComponentModel.Design;
 using Microsoft.AspNetCore.Mvc;
-using Ruby.Drum.Data;
-using Ruby.Drum.Domain.Catalog;
+using ruby.drum.Data;
+using ruby.drum.Domain.Catalog;
 //C
-namespace Ruby.Drum.Api.Controllers
+namespace ruby.drum.Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

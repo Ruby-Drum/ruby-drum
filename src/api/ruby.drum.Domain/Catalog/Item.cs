@@ -1,4 +1,4 @@
-namespace Ruby.Drum.Domain.Catalog;
+namespace ruby.drum.Domain.Catalog;
 
 public class Item
 {   
