@@ -3,7 +3,7 @@ GET http://localhost:5263/api/catalog HTTP/1.1
 
 
 ### Should return 200
-GET http://localhost:5263/api/catalog/42 HTTP/1.1
+GET http://localhost:5263/api/catalog/2 HTTP/1.1
 
 
 ### Should return 200
