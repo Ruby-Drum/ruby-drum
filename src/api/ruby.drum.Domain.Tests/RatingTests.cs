@@ -20,6 +20,8 @@ public class RatingTests
         Assert.AreEqual("Great!", rating.Review);
     }
 
+    [TestMethod]
+    [ExpectedException(typeof(ArgumentException))]
     public void Rating_With_Zero_Stars_Throws_Exception()
     {
         // Arrange
